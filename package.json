@@ -4,24 +4,34 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "open-browser": "open http://localhost:3000/",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.1.0",
+    "@notionhq/client": "^2.2.13",
+    "encoding": "^0.1.13",
+    "next": "^13.5.3",
+    "notion-to-md": "^3.1.1",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-markdown": "^9.0.0"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
+    "@types/gtag.js": "^0.0.18",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "eslint": "latest",
-    "eslint-config-next": "latest"
+    "typescript": "latest"
+  },
+  "prettier": {
+    "semi": false
   }
 }

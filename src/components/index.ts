@@ -1,0 +1,5 @@
+export * from "./src/footer"
+export * from "./src/header"
+export * from "./src/notepad"
+export * from "./src/contents"
+// export * from "./src/"

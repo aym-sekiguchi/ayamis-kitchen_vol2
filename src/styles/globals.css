@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .kaisei-decol {
+    font-family: "Kaisei Decol", serif;
+  }
+  h1 {
+    @apply text-2xl md:text-3xl font-semibold relative w-full pt-[2.875rem];
+  }
+  h1::before {
+    @apply absolute w-full h-[3px] inset-x-0 bottom-[5px] mx-auto  bg-[#441800];
+    content: "";
+  }
+  h2 {
+    @apply text-xl md:text-2xl font-semibold relative w-fit;
+  }
+  h2::before {
+    @apply absolute w-full h-0.5 inset-x-0 bottom-[5px] mx-auto  bg-[#441800];
+    content: "";
+  }
+  h3 {
+    @apply text-lg md:text-xl font-semibold;
+  }
+  ul {
+    @apply list-disc pl-4;
+  }
+  ol {
+    @apply list-decimal pl-6;
+  }
+  img {
+    @apply shadow-md max-w-md mx-auto w-full;
+  }
+  article a {
+    @apply underline decoration-black transition;
+  }
+  a:hover {
+    @apply no-underline;
+  }
+  p:has(a) {
+    @apply inline;
+  }
+  p:has(a) + p {
+    @apply inline;
+  }
+  .shadow-notepad {
+    box-shadow: 6px 6px 6px -6px rgba(0, 0, 0, 0.1),
+      6px 6px 6px -6px rgba(0, 0, 0, 0.1);
+  }
+  .notepad-hover:hover {
+    transform: perspective(2000px) rotateX(-10deg) skewX(-10deg);
+  }
+  .notepad-detail * {
+    line-height: 46px !important;
+  }
+}
