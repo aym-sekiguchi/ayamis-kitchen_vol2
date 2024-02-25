@@ -58,7 +58,7 @@ export function Contents(props: {
       return active
     })
     setFilterPosts(filteredPosts)
-  }, [filterTags])
+  }, [filterTags, allPosts])
   useEffect(() => {}, [filterPosts])
 
   useEffect(() => {

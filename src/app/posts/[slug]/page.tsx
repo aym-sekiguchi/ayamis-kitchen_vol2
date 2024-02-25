@@ -3,6 +3,7 @@ import { Metadata } from "next"
 import ReactMarkdown from "react-markdown"
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import { Data } from "@/types"
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -19,24 +20,11 @@ export async function generateMetadata({
   params: { id: string; slug: string }
 }): Promise<Metadata> {
   const posts = await getPosts()
-  const title = posts.filter(
-    (value: any) =>
-      // params: { title: value.title },
-      value.id === params.slug
-  )[0].title
+  const title = posts.filter((value: any) => value.id === params.slug)[0].title
   console.log(title)
   return {
     title: `${title} | Ayami's Kitchen`,
   }
-}
-
-type Data = {
-  id: string
-  title: string
-  description: string
-  date: string
-  slug: string
-  tags: string[]
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
